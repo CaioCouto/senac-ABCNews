@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
+
+:root {
+  --bg-header-footer: rgb(27, 113, 242);
+}
+
+body {
+  /* Grid Container */
+  font-family: "Montserrat", "Roboto", sans-serif;
+  min-height: 100vh;
+  display: grid;
+  /* Numero de linhas e a altura de cada linha */
+  grid-template-rows: 20vh minmax(70vh, auto) minmax(10vh, auto);
+
+  /* Numero de colunas e a largura de cada coluna */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+
+  /* Determina a area que cada elemento vai ocupar */
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  background: rgb(238, 238, 238);
+}
+
+header,
+footer,
+.navbar {
+  background: var(--bg-header-footer);
+}
+
+header {
+  /* Grid Items */
+  grid-area: header;
+}
+
+.navbar {
+  min-height: 100%;
+}
+
+.navbar-collapse {
+  justify-content: end;
+}
+
+.navbar-nav {
+  flex-basis: 50%;
+  justify-content: space-between;
+}
+
+main {
+  /* Grid Items */
+  grid-area: main;
+}
+
+footer {
+  /* Grid Items */
+  grid-area: footer;
+  justify-content: center;
+  align-items: center;
+}
